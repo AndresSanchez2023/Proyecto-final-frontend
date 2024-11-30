@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Encuestas</title>
+    <link rel="stylesheet" href="iniciostyle.css">
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <div class="header">
+        <img src="E:/Documents/PROYECTO FINAL DE INGENIERIA/logosimon.png" alt="Logo Simón Bolívar">
+        <div class="header-text">
+            <h1>Universidad Simón Bolívar</h1>
+            <h2>Portal de Encuestas</h2>
+        </div>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="main-container">
+        <!-- Sección 1: INICIO -->
+        <div class="section-1">
+            <h2>INICIO</h2>
+        </div>
+
+        <!-- Sección 2 y 3 -->
+        <div class="content-container">
+            <!-- Sección 2: Menú -->
+            <div class="menu">
+                <ul>
+                    <li class="menu-item" onclick="showOptions('encuestas')">Encuestas <span>></span></li>
+                    <li class="menu-item" onclick="showOptions('informes')">Informe de Encuestas <span>></span></li>
+                    <li class="menu-item">Salir</li>
+                </ul>
+            </div>
+
+            <!-- Sección 3: Opciones -->
+            <div class="section-3" id="section-3">
+                <div id="encuestas" class="options hidden">
+                    <button><img src="E:/Documents/PROYECTO FINAL DE INGENIERIA/iconoe.png" alt="Icono"> Crear Encuesta</button>
+                    <button><img src="E:/Documents/PROYECTO FINAL DE INGENIERIA/iconoe.png" alt="Icono"> Ver Encuestas Guardadas</button>
+                </div>
+                <div id="informes" class="options hidden">
+                    <button><img src="E:/Documents/PROYECTO FINAL DE INGENIERIA/iconoe.png" alt="Icono"> Ver Informe General</button>
+                    <button><img src="E:/Documents/PROYECTO FINAL DE INGENIERIA/iconoe.png" alt="Icono"> Ver Informe por Dependencia</button>
+                    <button><img src="E:/Documents/PROYECTO FINAL DE INGENIERIA/iconoe.png" alt="Icono"> Ver Informe por Encuesta</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Línea inferior -->
+    <div class="footer">
+        "La Universidad del Futuro"
+    </div>
+
+    <script>
+        function showOptions(option) {
+            document.querySelectorAll('.options').forEach(el => el.classList.add('hidden'));
+            document.getElementById(option).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

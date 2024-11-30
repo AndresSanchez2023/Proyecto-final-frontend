@@ -1,0 +1,131 @@
+/* Estilos Generales */
+body {
+    background-color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+.header {
+    background-color: #31704c;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header img {
+    height: 100px;
+    margin-right: 20px;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header-text h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #DAF7A6;
+}
+
+/* Contenedor principal */
+.main-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sección 1 */
+.section-1 {
+    background-color: #eeeeee;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    width: 30%; /* Ajusta el ancho */
+    margin-bottom: 20px;
+    text-align: left; /* Alinear el texto a la izquierda */
+}
+
+/* Contenedor de secciones 2 y 3 */
+.content-container {
+    display: flex;
+    width: 100%;
+    gap: 20px; /* Espaciado entre las columnas */
+}
+
+/* Menú lateral (Sección 2) */
+.menu {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-item span {
+    font-size: 20px;
+}
+
+/* Opciones (Sección 3) */
+.section-3 {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.options button {
+    background-color: #31704c;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    cursor: pointer;
+    width: 60%;
+}
+
+.options button img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Línea inferior */
+.footer {
+    background-color: #DAF7A6;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+}

@@ -1,0 +1,115 @@
+/* Estilos Generales */
+body {
+    background-color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Línea superior con logo y título */
+.top-line {
+    background-color: #31704c;
+    color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.top-line img {
+    position: absolute;
+    left: 20px;
+    height: 120px;
+}
+
+.top-line h1 {
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.side-image {
+    height: 400px;
+    margin-right: 20px;
+    margin-left: -50px;
+}
+
+/* Sección de inicio de sesión */
+.login-section {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-box {
+    background-color: #31704c;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Campos de entrada */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto 15px auto;
+}
+
+.form-group label {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: black;
+}
+
+/* Botón de inicio de sesión */
+.login-button {
+    background-color: #31704c;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80%;
+    max-width: 300px;
+}
+
+/* Línea inferior con mensaje */
+.bottom-line {
+    background-color: #DAF7A6;
+    color: black;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    font-size: 16px;
+}

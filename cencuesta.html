@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Encuesta</title>
+    <link rel="stylesheet" href="cencuestastyle.css">
+    <script>
+        function mostrarSeleccionado(id, texto) {
+            document.getElementById(id).innerText = texto;
+        }
+
+        function abrirVentanaEmergente() {
+            document.getElementById('ventanaEmergente').style.display = 'block';
+        }
+
+        function cerrarVentanaEmergente() {
+            document.getElementById('ventanaEmergente').style.display = 'none';
+        }
+
+        function guardarEncuesta() {
+            // Aquí puedes agregar la lógica para guardar la encuesta
+            alert("Encuesta guardada.");
+            window.location.href = "portalencuestas.html"; // Redirige al portal
+        }
+
+        function cancelarEncuesta() {
+            window.location.href = "portalencuestas.html"; // Redirige al portal sin guardar
+        }
+    </script>
+</head>
+<body>
+    <!-- Encabezado -->
+    <div class="header">
+        <img src="E:/Documents/PROYECTO FINAL DE INGENIERIA/logosimon.png" alt="Logo Simón Bolívar">
+        <div class="header-text">
+            <h1>Universidad Simón Bolívar</h1>
+            <h2>Crear Encuesta</h2>
+        </div>
+    </div>
+
+    <!-- Formulario de creación de encuesta -->
+    <div class="formulario">
+        <div class="campo">
+            <label for="tipoEncuesta">Tipo de Encuesta:</label>
+            <select id="tipoEncuesta" onchange="mostrarSeleccionado('tipoSeleccionado', this.value)">
+                <option value="Seleccionar">Seleccionar</option>
+                <option value="Satisfacción">Satisfacción</option>
+                <option value="Capacitación">Capacitación</option>
+                <option value="Monitoria">Monitoria</option>
+                <option value="Taller">Taller</option>
+                <option value="Congreso">Congreso</option>
+            </select>
+            <p id="tipoSeleccionado">Seleccionar</p>
+        </div>
+
+        <div class="campo">
+            <label for="dependencia">Dependencia:</label>
+            <select id="dependencia" onchange="mostrarSeleccionado('dependenciaSeleccionada', this.value)">
+                <option value="Seleccionar">Seleccionar</option>
+                <option value="Psicología">Psicología</option>
+                <option value="Ingeniería">Ingeniería</option>
+                <option value="Trabajo Social">Trabajo Social</option>
+                <option value="Derecho">Derecho</option>
+                <option value="Contaduría">Contaduría</option>
+                <option value="Público en General">Público en General</option>
+                <option value="Tesorería">Tesorería</option>
+                <option value="Admisiones">Admisiones</option>
+                <option value="Bienestar">Bienestar</option>
+            </select>
+            <p id="dependenciaSeleccionada">Seleccionar</p>
+        </div>
+
+        <div class="campo">
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" onchange="mostrarSeleccionado('sexoSeleccionado', this.value)">
+                <option value="Seleccionar">Seleccionar</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Otros">Otros</option>
+            </select>
+            <p id="sexoSeleccionado">Seleccionar</p>
+        </div>
+
+        <div class="campo">
+            <label for="nombreCompleto">Nombre Completo:</label>
+            <input type="text" id="nombreCompleto" placeholder="Escribe tu nombre">
+        </div>
+
+        <div class="campo">
+            <label for="documento">Documento:</label>
+            <input type="number" id="documento" placeholder="Escribe tu documento">
+        </div>
+
+        <div class="campo">
+            <button id="crearCampo" onclick="agregarCampoTexto()">Crear Campo de Texto</button>
+        </div>
+
+        <div class="campo">
+            <button id="crearCasillas" onclick="agregarCasillas()">Crear Casillas</button>
+        </div>
+
+        <div class="campo">
+            <button onclick="abrirVentanaEmergente()">Guardar Encuesta</button>
+        </div>
+    </div>
+
+    <!-- Ventana emergente -->
+    <div id="ventanaEmergente" style="display:none;">
+        <div class="ventana">
+            <button onclick="guardarEncuesta()">Guardar</button>
+            <button onclick="cancelarEncuesta()">Cancelar</button>
+            <button onclick="cerrarVentanaEmergente()">Editar</button>
+        </div>
+    </div>
+
+    <!-- Línea inferior -->
+    <div class="footer">
+        "La Universidad del Futuro"
+    </div>
+</body>
+</html>
